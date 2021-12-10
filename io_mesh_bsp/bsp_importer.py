@@ -458,7 +458,7 @@ def create_materials(texture_data, options):
         if texture_entry['is_emissive'] and mask is None:
             main_shader = node_tree.nodes.new('ShaderNodeEmission')
         else:
-            main_shader = node_tree.nodes.new('ShaderNodeBsdfDiffuse')
+            main_shader = node_tree.nodes.new('ShaderNodeBsdfPrincipled')
 
         image_node = node_tree.nodes.new('ShaderNodeTexImage')
         image_node.image = image
